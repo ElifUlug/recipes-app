@@ -7,7 +7,7 @@ function Navbar() {
 
       <NavLink to="/">HOME</NavLink>
       <NavLink to="/about">ABOUT</NavLink>
-      <a href="https://github.com/ElifUlug" target="_blank">
+      <a href="https://github.com/ElifUlug" target="_blank" rel="noreferrer">
         GITHUB
       </a>
       <NavLink to="/login">LOGOUT</NavLink>

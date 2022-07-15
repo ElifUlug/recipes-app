@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router";
 import homeImage from "../assets/home.png";
 
@@ -45,7 +45,6 @@ function Home() {
 
   return (
     <div className="home">
-
       <h1>Food App</h1>
       <form className="searchBar" onSubmit={handleSubmit}>
         <input
@@ -64,13 +63,14 @@ function Home() {
           <option value="dinner">Dinner</option>
         </select>
       </form>
-      {
-        allmeal.length>0 ? "" : (<img src={homeImage} alt="" className="homeImage" />) 
-      }
-        
+      {allmeal?.length > 0 ? (
+        ""
+      ) : (
+        <img src={homeImage} alt="" className="homeImage" />
+      )}
 
       <section className="mealSection">
-        {allmeal != [] &&
+        {allmeal !== [] &&
           allmeal?.map((item, index) => {
             return (
               <div key={index} className="mealBox">
